@@ -6,13 +6,12 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:14:00 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:42:44 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:04:37 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <unistd.h>
-#include <stdlib.h>
 
 void	free_list(char **av, t_stack *stack, int control)
 {

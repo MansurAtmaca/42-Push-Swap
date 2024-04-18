@@ -6,14 +6,11 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:40:58 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:42:44 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:06:12 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 
 int	find_len(char **list)
 {

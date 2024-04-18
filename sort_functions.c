@@ -6,12 +6,11 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:29:42 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:41:19 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:06:41 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
 
 int	sort_three(t_stack *s)
 {

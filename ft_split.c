@@ -6,11 +6,10 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:29:58 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:45:48 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 14:05:28 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "push_swap.h"
 
 static	char	**ft_free2(char **strs, int i)
