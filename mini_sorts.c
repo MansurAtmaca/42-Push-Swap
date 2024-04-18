@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 23:28:26 by mansurcanat       #+#    #+#             */
-/*   Updated: 2024/04/18 02:02:23 by matmaca          ###   ########.fr       */
+/*   Created: 2024/04/18 09:14:16 by matmaca           #+#    #+#             */
+/*   Updated: 2024/04/18 09:42:31 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_sort(t_stack *stack, int size)
+int	sort(t_stack *stack, int size)
 {
-	if (ft_is_sorted(stack->stack_a, stack->size_a, 0) == 0)
+	if (is_sorted(stack->stack_a, stack->size_a, 0) == 0)
 	{
 		if (size == 2)
 			sa(stack);
@@ -36,7 +36,7 @@ int	ft_push(t_stack *stack, int len, int flag)
 	return (len);
 }
 
-int	ft_sort_small_a(t_stack *s)
+int	sort_small_a(t_stack *s)
 {
 	if (s->stack_a[0] > s->stack_a[1])
 	{
@@ -48,7 +48,7 @@ int	ft_sort_small_a(t_stack *s)
 	return (1);
 }
 
-int	ft_sort_small_a2(t_stack *s, int len)
+int	sort_medium_a(t_stack *s, int len)
 {
 	while (len != 3 || !(s->stack_a[0] < s->stack_a[1]
 			&& s->stack_a[1] < s->stack_a[2]))
@@ -72,7 +72,7 @@ int	ft_sort_small_a2(t_stack *s, int len)
 	return (1);
 }
 
-int	ft_sort_small_b(t_stack *s, int len)
+int	sort_small_b(t_stack *s, int len)
 {
 	if (len == 2)
 	{

@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:40:58 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 02:18:58 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 09:42:44 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_check_repeat(t_stack *stack, char **argv, int control)
 		{
 			if (stack->stack_a[i] == stack->stack_a[j])
 			{
-				ft_free_list(argv, stack, control);
+				free_list(argv, stack, control);
 			}
 			j++;
 		}
@@ -52,10 +52,10 @@ void	push_swap(t_stack *stack, char **argv, int size, int control)
 
 	i = -1;
 	while (++i < size)
-		stack->stack_a[i] = ft_ps_atoi(argv[i], stack, argv, control);
+		stack->stack_a[i] = ps_atoi(argv[i], stack, argv, control);
 	ft_check_repeat(stack, argv, control);
-	if (!ft_is_sorted(stack->stack_a, size, 0))
-		ft_sort(stack, size);
+	if (!is_sorted(stack->stack_a, size, 0))
+		sort(stack, size);
 	free(stack->stack_a);
 	free(stack->stack_b);
 	free(stack);

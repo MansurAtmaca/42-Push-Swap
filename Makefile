@@ -1,9 +1,9 @@
 NAME = push_swap
 CC = gcc -g
 CFLAGS = -Wall -Wextra -Werror
-CFILES = ft_split.c \
+CFILES = utils_funcs.c \
 		ft_atoi.c \
-		utils_funcs.c \
+		ft_split.c \
 		ft_error.c \
 		ft_quicksort.c \
 		mini_sorts.c \
@@ -11,7 +11,7 @@ CFILES = ft_split.c \
 		rules_a.c \
 		rules_b.c \
 		rules_double.c \
-		sort_funcs.c \
+		sort_functions.c \
 
 OBJS = $(CFILES:.c=.o)
 

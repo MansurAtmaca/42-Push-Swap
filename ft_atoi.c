@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:29:26 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 02:18:58 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 09:45:44 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
 int	ft_is_num(char *s)
 {
 	int	i;
@@ -36,7 +37,7 @@ int	ft_is_num(char *s)
 	return (1);
 }
 
-int	ft_ps_atoi_(char *str, int *sign)
+int	ps_atoi_(char *str, int *sign)
 {
 	int	i;
 
@@ -52,7 +53,7 @@ int	ft_ps_atoi_(char *str, int *sign)
 	return (i);
 }
 
-int	ft_ps_atoi(char *str, t_stack *stack, char **av, int control)
+int	ps_atoi(char *str, t_stack *stack, char **av, int control)
 {
 	unsigned int		i;
 	int					sign;
@@ -60,20 +61,17 @@ int	ft_ps_atoi(char *str, t_stack *stack, char **av, int control)
 
 	num = 0;
 	sign = 1;
-	i = ft_ps_atoi_(str, &sign);
+	i = ps_atoi_(str, &sign);
 	if (!(ft_is_num(str)))
-		ft_free_list(av, stack, control);
+		free_list(av, stack, control);
 	while (str[i])
 	{
 		if (str[i] < '0' || str[i] > '9')
-			ft_free_list(av, stack, control);
+			free_list(av, stack, control);
 		num = (str[i] - '0') + (num * 10);
 		i++;
 	}
 	if ((num > 2147483648 && sign == -1) || (num > 2147483647 && sign == 1))
-		ft_free_list(av, stack, control);
+		free_list(av, stack, control);
 	return (num * sign);
 }
-
-
-

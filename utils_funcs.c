@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:31:18 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 01:57:33 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 09:45:53 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,21 +47,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	while (src[++i] && i < size - 1)
 		dst[i] = src[i];
 	return (dst[i] = 0, ft_strlen(src));
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*s2;
-	size_t	s_len;
-
-	s_len = ft_strlen(s);
-	if (start >= s_len || len <= 0)
-		return (ft_strdup(""));
-	if (len > s_len - start)
-		len = s_len - start;
-	s2 = (char *)malloc(len + 1);
-	if (!s2)
-		return (NULL);
-	ft_strlcpy(s2, s + start, len + 1);
-	return (s2);
 }
