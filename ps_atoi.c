@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 01:29:26 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:45:44 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 10:29:01 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_is_num(char *s)
 	return (1);
 }
 
-int	ps_atoi_(char *str, int *sign)
+int	ps_atoi_check(char *str, int *sign)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ int	ps_atoi(char *str, t_stack *stack, char **av, int control)
 
 	num = 0;
 	sign = 1;
-	i = ps_atoi_(str, &sign);
+	i = ps_atoi_check(str, &sign);
 	if (!(ft_is_num(str)))
 		free_list(av, stack, control);
 	while (str[i])

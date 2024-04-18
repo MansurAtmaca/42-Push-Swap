@@ -2,7 +2,7 @@ NAME = push_swap
 CC = gcc -g
 CFLAGS = -Wall -Wextra -Werror
 CFILES = utils_funcs.c \
-		ft_atoi.c \
+		ps_atoi.c \
 		ft_split.c \
 		ft_error.c \
 		ft_quicksort.c \

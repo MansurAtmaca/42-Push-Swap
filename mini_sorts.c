@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:14:16 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:42:31 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 11:20:49 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 int	sort(t_stack *stack, int size)
 {
-	if (is_sorted(stack->stack_a, stack->size_a, 0) == 0)
-	{
-		if (size == 2)
-			sa(stack);
-		else if (size == 3)
-			sort_three(stack);
-		else
-			ft_first_seperation(stack, size);
-	}
+	if (size == 2)
+		sa(stack);
+	else if (size == 3)
+		sort_three(stack);
+	else
+		divide(stack, size);
 	return (1);
 }
 
@@ -53,7 +50,7 @@ int	sort_medium_a(t_stack *s, int len)
 	while (len != 3 || !(s->stack_a[0] < s->stack_a[1]
 			&& s->stack_a[1] < s->stack_a[2]))
 	{
-		if (len == 3 && s->stack_a[0] > s->stack_a[1] && s->stack_a[2])
+		if (len == 3 && s->stack_a[0] > s->stack_a[1])
 		{
 			if ((s->stack_a[0] > s->stack_a[1])
 				&& (s->stack_b[0] < s->stack_b[1]))

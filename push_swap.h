@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:35:32 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:51:43 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 12:34:14 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ss(t_stack	*s, int print);
 
 int		quicksort_a(t_stack *stack, int len, int count);
 int		quicksort_b(t_stack *stack, int len, int count);
-int		ft_first_seperation(t_stack *stack, int len);
+int		divide(t_stack *stack, int len);
 
 int		sort_small_a(t_stack *s);
 int		sort_medium_a(t_stack *s, int len);

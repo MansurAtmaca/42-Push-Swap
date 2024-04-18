@@ -6,7 +6,7 @@
 /*   By: matmaca <matmaca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:14:08 by matmaca           #+#    #+#             */
-/*   Updated: 2024/04/18 09:42:12 by matmaca          ###   ########.fr       */
+/*   Updated: 2024/04/18 11:46:47 by matmaca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	quicksort_b(t_stack *stack, int len, int count)
 	return (1);
 }
 
-int	ft_first_seperation(t_stack *stack, int len)
+int	divide(t_stack *stack, int len)
 {
 	int	pivot_a;
 	int	pivot_b;
